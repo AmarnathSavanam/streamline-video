@@ -2,6 +2,7 @@ import { Terminal, Settings, Gauge, Cloud, AlertTriangle, Zap } from "lucide-rea
 import CodeBlock from "@/components/CodeBlock";
 import SectionCard from "@/components/SectionCard";
 import BitrateCalculator from "@/components/BitrateCalculator";
+import FileDropZone from "@/components/FileDropZone";
 
 const ffmpegCommand = `ffmpeg -i input.mp4 \\
   -c:v libx264 \\
@@ -74,6 +75,9 @@ const Index = () => {
 
         {/* Calculator */}
         <BitrateCalculator />
+
+        {/* File Drop Zone */}
+        <FileDropZone />
 
         {/* FFmpeg Single Pass */}
         <SectionCard title="FFmpeg — Single Pass (CRF)" icon={<Terminal className="w-5 h-5" />} accent="green">
